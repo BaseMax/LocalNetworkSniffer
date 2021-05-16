@@ -116,10 +116,6 @@ http://SERVER_IP/site/wp-includes/wlwmanifest.xml
 http://SERVER_IP/cms/wp-includes/wlwmanifest.xml
 http://SERVER_IP/sito/wp-includes/wlwmanifest.xml
 http://SERVER_IP/.env
-
-
-
-
 http://SERVER_IP:80/
 http://SERVER_IP/
 http://SERVER_IP/
