@@ -8,6 +8,11 @@ A tiny node js-based program to listen on 80 port and will log all requests and 
 - Put telegram bot' Token to `app.js` file
 - Start app.js directly or via `pm2 start app.js`
 
+## Purpose
+
+If you want to sniff a special domain at your server, You can setup following script at another VPS and proxy your target domain to next **SERVER IP**.
+Just: `nano /etc/hosts`
+
 ### My Commands
 
 ```
@@ -39,9 +44,8 @@ pm2 restart 0
 pm2 log
 ```
 
-## Purpose
+### TODO
 
-If you want to sniff a special domain at your server, You can setup following script at another VPS and proxy your target domain to next **SERVER IP**.
-Just: `nano /etc/hosts`
+- Adding/support HTTPS-SSL
 
 © Copyright 2021, Max Base
