@@ -39,4 +39,9 @@ pm2 restart 0
 pm2 log
 ```
 
+## Purpose
+
+If you want to sniff a special domain at your server, You can setup following script at another VPS and proxy your target domain to next **SERVER IP**.
+Just: `nano /etc/hosts`
+
 © Copyright 2021, Max Base
