@@ -251,7 +251,6 @@ http://SERVER_IP:80/
 http://undefined/
 http://undefined/
 http://SERVER_IP:80/
-
 http://SERVER_IP/favicon.ico
 http://SERVER_IP/favicon.ico
 http://SERVER_IP/favicon.ico
